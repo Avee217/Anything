@@ -1,18 +1,15 @@
-import * as notification from './notification';
-import game from './game';
+// import * as notification from "./notification.js";
 
+// export function lightFire(game) {
+//   game.changeRoomTemperature(25);
 
-function lightFire() {
+//   notification.addNotification("The Fire Has Started");
 
-    game.changeRoomTemperature(25);
+//   const x = document.getElementById("fireButton");
 
-    notification.addNotification("The Fire Has Started");
+//   x.setAttribute("disabled", true);
 
-    const x = document.getElementById("fireButton");
-
-    x.setAttribute("disabled", true);
-
-    window.setTimeout(function () { x.removeAttribute("disabled") }, 1000);
-
-
-}
+//   window.setTimeout(function () {
+//     x.removeAttribute("disabled");
+//   }, 1000);
+// }
