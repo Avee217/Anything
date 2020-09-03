@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- CSS only -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
 
     <!-- JS, Popper.js, and jQuery -->
     <script
@@ -71,8 +63,36 @@
           </ul>
         </div>
 
-        <div class="col-lg-4">Storage</div>
-      </div>
-    </div>
-  </body>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				Notificaions
+				<ul id="notification">
+					<li>Start fire</li>
+					<li>The room is freezing cold</li>
+					<li>The Game has begun</li>
+				</ul>
+			</div>
+			<div class="col-lg-4">
+				<ul>
+					<li><button id="fireButton" type="button" class="btn btn-secondary" onclick="game.lightFire()">
+							Light Fire
+						</button></li>
+					<li><button id="gatherWoodButton" type="button" class="btn btn-secondary"
+							onclick="game.gatherWood()">
+							Gather wood
+						</button></li>
+				</ul>
+			</div>
+
+			<div class="col-lg-4">
+				Storage
+
+
+			</div>
+		</div>
+	</div>
+</body>
+
 </html>
