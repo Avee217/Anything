@@ -53,13 +53,11 @@ class Game {
 
 
   // Gather function
-
-
-  gatherWood(game) {
+   gatherWood() {
 
     this.woodAmount += 5;
     notification.addNotification(5 + "wood has been gathered");
-    consolelog(this.woodAmount);
+    console.log(this.woodAmount);
     const x = document.getElementById("gatherWoodButton");
 
     x.setAttribute("disabled", true);
