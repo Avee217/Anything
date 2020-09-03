@@ -1,11 +1,11 @@
 function gatherWood() {
   this.woodAmount += 5;
   addNotification(5 + " wood has been gathered");
-  const x = document.getElementById("gatherWoodButton");
+  const gatherWoodButton = document.getElementById("gatherWoodButton");
 
-  x.setAttribute("disabled", true);
+  gatherWoodButton.setAttribute("disabled", true);
 
   window.setTimeout(function () {
-    x.removeAttribute("disabled");
+    gatherWoodButton.removeAttribute("disabled");
   }, 2000);
 }
