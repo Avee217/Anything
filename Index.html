@@ -25,8 +25,13 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="scripts/index.js"></script>
-    <script type="module" src="scripts/fire.js"></script>
+    <script src="scripts/fire.js"></script>
+    <script src="scripts/wood.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/notification.js"></script>
+    <script src="scripts/state.js"></script>
+    <script src="scripts/temperature.js"></script>
+    <script src="scripts/index.js"></script>
     <title>Text Adventure</title>
   </head>
 
@@ -42,14 +47,28 @@
           </ul>
         </div>
         <div class="col-lg-4">
-          <button
-            id="fireButton"
-            type="button"
-            class="btn btn-secondary"
-            onclick="game.lightFire()"
-          >
-            Light Fire
-          </button>
+          <ul>
+            <li>
+              <button
+                id="fireButton"
+                type="button"
+                class="btn btn-secondary"
+                onclick="lightFire()"
+              >
+                Light Fire
+              </button>
+            </li>
+            <li>
+              <button
+                id="gatherWoodButton"
+                type="button"
+                class="btn btn-secondary"
+                onclick="gatherWood()"
+              >
+                Gather wood
+              </button>
+            </li>
+          </ul>
         </div>
 
         <div class="col-lg-4">Storage</div>

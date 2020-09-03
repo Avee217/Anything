@@ -1,4 +1,2 @@
-import Game from "./game.js";
-
-const game = new Game();
+const game = new window.Game();
 window.game = game;
