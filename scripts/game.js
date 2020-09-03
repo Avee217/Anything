@@ -4,6 +4,7 @@ import * as notification from "./notification.js";
 class Game {
   constructor() {
     this.roomTemperature = 0;
+    this.woodAmount = 0;
     window.setInterval(this.changeRoomTemperature.bind(this), 10000, -10);
 
     window.addEventListener("temperatureChange", function (event) {
@@ -48,6 +49,24 @@ class Game {
     window.setTimeout(function () {
       fireButton.removeAttribute("disabled");
     }, 1000);
+  }
+
+
+  // Gather function
+
+
+  gatherWood(game) {
+
+    this.woodAmount += 5;
+    notification.addNotification(5 + "wood has been gathered");
+    consolelog(this.woodAmount);
+    const x = document.getElementById("gatherWoodButton");
+
+    x.setAttribute("disabled", true);
+
+    window.setTimeout(function () {
+      x.removeAttribute("disabled");
+    }, 2000);
   }
 }
 export default Game;

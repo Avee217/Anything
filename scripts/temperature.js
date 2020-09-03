@@ -13,4 +13,3 @@ export function getTemperatureState(temperature) {
         return 'warm';
     }
 }
-
