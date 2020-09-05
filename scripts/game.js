@@ -11,24 +11,15 @@ class Game {
         addNotification("The temperature is " + newRoomStatus);
       }
     });
+
+    // Wood change listener
+    window.addEventListener("woodChange", function (event) {
+      setWoodAmount(event.detail.newWood);
+    });
   }
 
   decreaseRoomTemperature() {
     window.state.changeTemperature(-10);
-  }
-
-  // Gather function
-  gatherWood() {
-    this.woodAmount += 5;
-    notification.addNotification(5 + "wood has been gathered");
-    console.log(this.woodAmount);
-    const x = document.getElementById("gatherWoodButton");
-
-    x.setAttribute("disabled", true);
-
-    window.setTimeout(function () {
-      x.removeAttribute("disabled");
-    }, 2000);
   }
 }
 window.Game = Game;
