@@ -28,6 +28,29 @@ class Game {
     window.addEventListener("meat", function (event) {
       setStorageDisplay("meatAmount", event.detail.newValue);
     });
+    requestAnimationFrame(Game.render);
+  }
+
+  static render() {
+    if (window.state.getValue("wood") >= 10) {
+      const element = document.getElementById("createTrapButton");
+      element.classList.add("visible");
+      element.classList.remove("invisible");
+    } else {
+      const element = document.getElementById("createTrapButton");
+      element.classList.add("invisible");
+      element.classList.remove("visible");
+    }
+    if (window.state.getValue("trap") >= 1) {
+      const element = document.getElementById("gatherFromTrapButton");
+      element.classList.add("visible");
+      element.classList.remove("invisible");
+    } else {
+      const element = document.getElementById("gatherFromTrapButton");
+      element.classList.add("invisible");
+      element.classList.remove("visible");
+    }
+    requestAnimationFrame(Game.render);
   }
 
   decreaseRoomTemperature() {
