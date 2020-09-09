@@ -14,11 +14,19 @@ class Game {
 
     // Wood change listener
     window.addEventListener("wood", function (event) {
-      setWoodAmount(event.detail.newValue);
+      setStorageDisplay("woodAmount", event.detail.newValue);
     });
     //Trap change Listener
     window.addEventListener("trap", function (event) {
-      setTrapAmount(event.detail.newValue);
+      setStorageDisplay("trapAmount", event.detail.newValue);
+    });
+    //Fur change Listener
+    window.addEventListener("fur", function (event) {
+      setStorageDisplay("furAmount", event.detail.newValue);
+    });
+    //Meat change Listener
+    window.addEventListener("meat", function (event) {
+      setStorageDisplay("meatAmount", event.detail.newValue);
     });
   }
 

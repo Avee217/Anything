@@ -3,6 +3,8 @@ class State {
     this.temperature = 0;
     this.wood = 0;
     this.trap = 0;
+    this.fur = 0;
+    this.meat = 0;
   }
 
   setValue(key, value) {

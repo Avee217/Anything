@@ -1,6 +1,3 @@
-function setWoodAmount(value) {
-  document.getElementById("woodAmount").innerHTML = value;
-}
-function setTrapAmount(value) {
-  document.getElementById("trapAmount").innerHTML = value;
+function setStorageDisplay(id, value) {
+  document.getElementById(id).innerHTML = value;
 }

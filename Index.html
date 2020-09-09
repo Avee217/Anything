@@ -51,12 +51,7 @@
         <div class="col-lg-4">
           <ul>
             <li>
-              <button
-                id="fireButton"
-                type="button"
-                class="btn btn-secondary"
-                onclick="lightFire()"
-              >
+              <button id="fireButton" type="button" class="btn btn-secondary" onclick="lightFire()">
                 Light Fire
               </button>
             </li>
@@ -82,20 +77,10 @@
             </li>
             <li>
               <button
-                id="placeTrapButton"
+                id="gatherFromTrapButton"
                 type="button"
                 class="btn btn-secondary"
-                onclick="placeTrap()"
-              >
-                Place Traps
-              </button>
-            </li>
-            <li>
-              <button
-                id="placeTrapButton"
-                type="button"
-                class="btn btn-secondary"
-                onclick="checkTrap()"
+                onclick="gatherFromTrap()"
               >
                 Check Traps
               </button>
@@ -107,6 +92,8 @@
           Storage
           <div>Wood - <span id="woodAmount">0</span></div>
           <div>Trap - <span id="trapAmount">0</span></div>
+          <div>Fur- <span id="furAmount">0</span></div>
+          <div>Meat- <span id="meatAmount">0</span></div>
         </div>
       </div>
     </div>
