@@ -1,7 +1,7 @@
 function lightFire() {
-  if (window.state.getWood() > 0) {
-    window.state.changeTemperature(25);
-    window.state.changeWood(-1);
+  if (window.state.getValue("wood") > 0) {
+    window.state.changeValue("temperature", 25);
+    window.state.changeValue("wood", -1);
 
     addNotification("The Fire Has Started");
 

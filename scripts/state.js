@@ -2,49 +2,27 @@ class State {
   constructor() {
     this.temperature = 0;
     this.wood = 0;
+    this.trap = 0;
   }
 
-  setTemperature(x) {
-    this.temperature = x;
+  setValue(key, value) {
+    this[key] = value;
+  }
+  getValue(key) {
+    return this[key];
   }
 
-  getTemperature() {
-    return this.temperature;
-  }
-
-  changeTemperature(value) {
-    const oldTemperature = this.temperature;
-    this.temperature += value;
-    if (this.temperature > 100) {
-      this.temperature = 100;
+  changeValue(key, value) {
+    const oldValue = this[key];
+    this[key] += value;
+    if (this[key] > 100) {
+      this[key] = 100;
     }
-    if (this.temperature < 0) {
-      this.temperature = 0;
+    if (this[key] < 0) {
+      this[key] = 0;
     }
-    this.notifyEvent("temperatureChange", {
-      oldTemperature: oldTemperature,
-      newTemperature: this.getTemperature(),
-    });
-    return this.temperature;
-  }
 
-  setWood(x) {
-    this.wood = x;
-  }
-  getWood() {
-    return this.wood;
-  }
-
-  changeWood(value) {
-    const oldWood = this.wood;
-    this.wood += value;
-    if (this.wood < 0) {
-      this.wood = 0;
-    }
-    this.notifyEvent("woodChange", {
-      oldWood: oldWood,
-      newWood: this.getWood(),
-    });
+    this.notifyEvent(key, { oldValue: oldValue, newValue: this.getValue(key) });
   }
 
   notifyEvent(eventName, data = {}) {

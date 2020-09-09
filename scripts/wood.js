@@ -1,5 +1,5 @@
 function gatherWood() {
-  window.state.changeWood(5);
+  window.state.changeValue("wood", 5);
   addNotification(5 + " wood has been gathered");
   const gatherWoodButton = document.getElementById("gatherWoodButton");
 

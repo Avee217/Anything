@@ -27,6 +27,7 @@
     ></script>
     <script src="scripts/fire.js"></script>
     <script src="scripts/wood.js"></script>
+    <script src="scripts/trap.js"></script>
     <script src="scripts/storage.js"></script>
     <script src="scripts/game.js"></script>
     <script src="scripts/notification.js"></script>
@@ -66,7 +67,37 @@
                 class="btn btn-secondary"
                 onclick="gatherWood()"
               >
-                Gather wood
+                Gather Wood
+              </button>
+            </li>
+            <li>
+              <button
+                id="createTrapButton"
+                type="button"
+                class="btn btn-secondary"
+                onclick="createTrap()"
+              >
+                Create Traps
+              </button>
+            </li>
+            <li>
+              <button
+                id="placeTrapButton"
+                type="button"
+                class="btn btn-secondary"
+                onclick="placeTrap()"
+              >
+                Place Traps
+              </button>
+            </li>
+            <li>
+              <button
+                id="placeTrapButton"
+                type="button"
+                class="btn btn-secondary"
+                onclick="checkTrap()"
+              >
+                Check Traps
               </button>
             </li>
           </ul>
@@ -75,6 +106,7 @@
         <div class="col-lg-4">
           Storage
           <div>Wood - <span id="woodAmount">0</span></div>
+          <div>Trap - <span id="trapAmount">0</span></div>
         </div>
       </div>
     </div>
