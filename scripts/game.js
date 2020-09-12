@@ -32,12 +32,23 @@ class Game {
   }
 
   static render() {
+    // const currentWoodValue= window.state.get("wood");
+
     if (window.state.getValue("wood") >= 10) {
       const element = document.getElementById("createTrapButton");
       element.classList.add("visible");
       element.classList.remove("invisible");
     } else {
       const element = document.getElementById("createTrapButton");
+      element.classList.add("invisible");
+      element.classList.remove("visible");
+    }
+    if (window.state.getValue("wood") >= 30) {
+      const element = document.getElementById("buildCartButton");
+      element.classList.add("visible");
+      element.classList.remove("invisible");
+    } else {
+      const element = document.getElementById("buildCartButton");
       element.classList.add("invisible");
       element.classList.remove("visible");
     }

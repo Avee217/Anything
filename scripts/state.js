@@ -5,6 +5,7 @@ class State {
     this.trap = 0;
     this.fur = 0;
     this.meat = 0;
+    this.cart = 0;
   }
 
   setValue(key, value) {
